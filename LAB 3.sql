@@ -2,7 +2,7 @@
 Delroy Mathieson*/
 
 -- #1 List the order number and total dollars of all orders. --
-	SELECT ordernum, totalUSD
+	SELECT orderno, totalUSD
 	FROM orders; 
 
 -- #2 List the name and city of agents named Smith. --
@@ -13,7 +13,7 @@ Delroy Mathieson*/
 -- #3 List the id, name, and price of products with quantity more than 200,010. --
 	SELECT pid, name, priceUSD
 	FROM products
-	WHERE quantity > 200010;
+	WHERE qty > 200010;
 
 -- #4 List the names and cities of customers in Duluth. --
 	SELECT name, city 
@@ -36,7 +36,7 @@ Delroy Mathieson*/
 -- #7  List all data for orders in March or May. --
 	SELECT *
 	FROM orders
-	WHERE month='March'
+	WHERE month='Mar'
 	OR month='May';
 
 --#8  List all data for orders in February of US$500 or more. --
