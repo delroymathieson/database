@@ -17,7 +17,7 @@ Delroy Mathieson*/
 	  INNER JOIN agents ON orders.aid = agents.aid
 	  INNER JOIN customers ON orders.cid = customers.cid
 	  INNER JOIN products ON orders.pid = products.pid
-    WHERE customers.city = ('Beijing')
+        WHERE customers.city = ('Beijing')
 	ORDER BY pid DESC
 	;
 
@@ -45,8 +45,6 @@ Delroy Mathieson*/
 	
 
 
-
-
 -- #5 Show the names of customers who placed at least one order through an agent in their own city, along with those agent(s') names. --
 	SELECT agents.name, customers.name 
 	FROM orders INNER JOIN customers ON orders.cid = customers.cid
@@ -56,13 +54,10 @@ Delroy Mathieson*/
 
 
 
-
 -- #6  Show the names of customers and agents living in the same city, along with the name of the shared city, regardless of whether or not the customer has ever placed an order with that agent.--
 	SELECT customers.name, customers.city, agents.name, agents.city
 	FROM customers, agents
 	WHERE customers.city = agents.city; 
-
-
 
 
 
